@@ -1,0 +1,23 @@
+body {
+  background: linear-gradient(135deg, #90b0e1, #a289cb);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.login-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-title {
+  font-weight: bold;
+  color: #6592d5;
+}
