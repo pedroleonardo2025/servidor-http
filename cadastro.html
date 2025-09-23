@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Cursos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <header class="text-center mb-4">
+            <h1>Gerenciador de Cursos</h1>
+        </header>
+
+        <div class="card p-4 shadow-sm mb-5">
+            <h2 class="card-title text-center" id="form-title">Cadastrar Novo Curso</h2>
+            <form id="course-form">
+                <input type="hidden" id="course-id">
+                
+                <div class="mb-3">
+                    <label for="course-name" class="form-label">Nome do Curso</label>
+                    <input type="text" class="form-control" id="course-name" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="course-description" class="form-label">Descrição</label>
+                    <textarea class="form-control" id="course-description" rows="3" required></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="course-price" class="form-label">Preço</label>
+                    <input type="number" class="form-control" id="course-price" step="0.01" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="course-workload" class="form-label">Carga Horária (horas)</label>
+                    <input type="number" class="form-control" id="course-workload" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="course-professor" class="form-label">Professor</label>
+                    <input type="text" class="form-control" id="course-professor" required>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary" id="submit-button">Cadastrar</button>
+                    <button type="button" class="btn btn-secondary" id="cancel-button" style="display: none;">Cancelar Edição</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="feedback-message" class="mt-3 text-center"></div>
+
+        <h2 class="text-center mt-5 mb-3">Cursos Cadastrados</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Preço</th>
+                        <th scope="col">Carga Horária</th>
+                        <th scope="col">Professor</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="courses-table-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="cadastro.js"></script>
+</body>
+</html>
